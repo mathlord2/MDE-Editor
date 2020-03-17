@@ -1,14 +1,17 @@
 <script>
+	import { onMount } from 'svelte';
 	import SimpleMDE from "SimpleMDE";
-	window.onload = function() {
-		const simplemde = new SimpleMDE({ element: document.getElementById("newsEditor") });
-	}
+	let editorElement;
+
+	onMount(() => {
+		const simplemde = new SimpleMDE({ element: editorElement });
+	});
 </script>
 
 <main>
 	<h1>Hello there!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<textarea id="newsEditor"></textarea>
+	<textarea bind:this={editorElement}></textarea>
 </main>
 
 <style>
