@@ -16,6 +16,7 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "fomantic-ui": "^2.8.4",
     "simplemde": "^1.11.2",
     "sirv-cli": "^0.4.4"
   }
